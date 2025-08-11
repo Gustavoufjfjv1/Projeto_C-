@@ -229,10 +229,10 @@ namespace AtividadeAvaliativaAgosto
                     
                    
                     if(j %2 == 0) {
-                       mat[i, j] = " 1 ";
+                       mat[i, j] = " X ";
                    }
                    if(i == 0){
-                       mat[i, j] = " 1 "; 
+                       mat[i, j] = " X "; 
                    }
                    texto += mat[i, j]; 
                    
@@ -246,4 +246,5 @@ namespace AtividadeAvaliativaAgosto
         }
     }
 }
+
 
