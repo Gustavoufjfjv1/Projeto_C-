@@ -144,7 +144,7 @@ namespace AtividadeAvaliativaAgosto
             }
 
             Console.WriteLine(texto);
-            Console.ReadKey();*/
+            Console.ReadKey();
 
             string[,] mat = new string[10, 10];
             string texto = "";
@@ -206,8 +206,44 @@ namespace AtividadeAvaliativaAgosto
             }
 
             Console.WriteLine(texto);
+            Console.ReadKey();*/
+
+            string[,] mat = new string[10, 10];
+            string texto = "";
+
+
+                        for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    mat[i, j] = " O ";
+
+                }
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                   
+                    
+                   
+                    if(j %2 == 0) {
+                       mat[i, j] = " 1 ";
+                   }
+                   if(i == 0){
+                       mat[i, j] = " 1 "; 
+                   }
+                   texto += mat[i, j]; 
+                   
+                }
+                texto += "\n";
+            }
+
+            Console.WriteLine(texto);
             Console.ReadKey();
 
         }
     }
 }
+
