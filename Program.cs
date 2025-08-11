@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -73,7 +73,7 @@ namespace AtividadeAvaliativaAgosto
             Console.WriteLine(texto);
             Console.WriteLine("Soma das colunas: " + textoColuna);
             Console.WriteLine("Soma da soma das colunas: " + colunasSomada);
-            Console.ReadKey();*/
+            Console.ReadKey();
 
             Random r = new Random();
             int[,] mat = new int[3, 3];
@@ -104,6 +104,110 @@ namespace AtividadeAvaliativaAgosto
             Console.WriteLine(texto);
             Console.WriteLine(texto2);
             Console.ReadKey();
+
+            string[,] mat = new string[5, 10];
+            string texto = "";
+
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    mat[i, j] = "O";
+
+                }
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if(j < 5)
+                    {
+                        if (i + j >= 4)
+                        {
+                            mat[i, j] = "X";
+                        }
+                    }
+                    else
+                    {
+                        if (j - i <= 5)
+                        {
+                            mat[i, j] = "X";
+                        }
+
+                    }
+                    texto += mat[i, j] + " ";
+
+                }
+                texto += "\n";
+            }
+
+            Console.WriteLine(texto);
+            Console.ReadKey();*/
+
+            string[,] mat = new string[10, 10];
+            string texto = "";
+
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    mat[i, j] = "O";
+
+                }
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if(i <= 4)
+                    {
+                        if (j < 5)
+                        {
+                            if (i + j >= 4)
+                            {
+                                mat[i, j] = "X";
+                            }
+                        }
+                        else
+                        {
+                            if (j - i <= 5)
+                            {
+                                mat[i, j] = "X";
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        if (j < 5)
+                        {
+                            if (i - j <= 5)
+                            {
+                                mat[i, j] = "X";
+                            }
+                        }
+                        else
+                        {
+                            if (i + j <= 14)
+                            {
+                                mat[i, j] = "X";
+                            }
+
+                        }
+                    }
+                    texto += mat[i, j] + " ";
+
+                }
+                texto += "\n";
+            }
+
+            Console.WriteLine(texto);
+            Console.ReadKey();
+
         }
     }
 }
